@@ -12,39 +12,30 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            hikeResults: filterHikeList('Sweden',20),
+            hikeResults: filterHikeList('2017',20),
         };
     }
 
     handleSearchChange = (event) => {
         console.log(event.target.value)
-        this.state = {
-            hikeResults: filterHikeList(event.target.value, 20),
-        };
+        this.setState({
+            hikeResults: filterHikeList(event.target.value.toUpperCase(), 20),
+        });
+        console.log('handleSearchChange : '+this.state.hikeResults.length)
+
     }
 
     render() {
         console.log("App.render()")
         return (
             <div>
-                <Navbar inverse fixedTop>
-                    <Grid>
-                        <Navbar.Header>
-                            <Navbar.Brand>
-                                <a href="/">Nico-Hike</a>
-                            </Navbar.Brand>
-                            <Navbar.Toggle />
-                        </Navbar.Header>
-                    </Grid>
-                </Navbar>
                 <Jumbotron>
                     <Header/>
-                    <h2>{this.state.hikeResults.length}</h2>
                     <SearchInput
                         changeSearchText={this.handleSearchChange}
                     />
                     <HikeResults
-                        hikesData={this.state.hikeResults}
+                        hikeData={this.state.hikeResults}
                     />
 
                 </Jumbotron>

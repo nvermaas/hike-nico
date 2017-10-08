@@ -9,12 +9,17 @@ class HikeResults extends React.Component {
         return (
             <div className="component-hike-results">
                 {
-                    this.props.hikesData.map((hikesData) => {
+                    this.props.hikeData.map((hikeData) => {
                         return (
                             <HikeResultRow
-                                place={hikesData.place}
-                                title={hikesData.title}
-                                hike_image_url={hikesData.hike_image_url}
+                                id={hikeData.id}
+                                place={hikeData.place}
+                                title={hikeData.title}
+                                country={hikeData.country}
+                                date={hikeData.date}
+                                duration={hikeData.duration}
+                                year={hikeData.year}
+                                hike_image_url={hikeData.hike_image_url}
 
                             />
                         );

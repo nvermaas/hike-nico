@@ -7,18 +7,22 @@ import PropTypes from 'prop-types';
 
 class HikeResultRow extends React.Component {
     render() {
-
+        let url = "http://uilennest.net/owlsnest/hiking/" + this.props.id
         return (
             <div className="component-hike-result-row">
+                <a href={this.props.hike_image_url}>
+
                 <img
                     alt={this.props.title}
                     src={this.props.hike_image_url}
                 />
-                <span
-                    className="title"
-                >
-          {this.props.title}
-        </span>
+                </a>
+                <span className="title">
+
+                <a href = {url}>
+                {this.props.title} - {this.props.year} - {this.props.place} - {this.props.date} - {this.props.duration}
+                </a>
+                </span>
             </div>
         );
     }
