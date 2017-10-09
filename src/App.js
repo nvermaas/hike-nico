@@ -89,7 +89,7 @@ class App extends React.Component {
                     <Grid>
                         <Navbar.Header>
                             <Navbar.Brand>
-                                <a href="/">Hike Nico (react)</a>
+                                <a href="/">Hike Nico (version 9 oct 2017)</a>
                             </Navbar.Brand>
                             <Navbar.Toggle />
                         </Navbar.Header>
