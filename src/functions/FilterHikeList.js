@@ -1,11 +1,12 @@
 /**
  * Created by Vermaas on 10/8/2017.
  */
-import myHikeList from '../assets/myHikeList.json';
+// import myHikeList from '../assets/myHikeList.json';
 
-export default function filterHikeList(searchText, maxResults) {
+export default function filterHikeList(searchText, fetchedHikeList, maxResults) {
     console.log("filterHikeList("+searchText+")")
-    return myHikeList.filter((hike) => {
+    // fetchedHikeList = myHikeList
+    return fetchedHikeList.filter((hike) => {
         if (hike.title.toUpperCase().includes(searchText)) {
 
             return true;
