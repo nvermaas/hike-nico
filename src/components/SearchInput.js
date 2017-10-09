@@ -13,7 +13,7 @@ class SearchInput extends React.Component {
     render() {
         return (
             <div className="component-search-input">
-                <div>
+                <div><h4>Search Hike</h4>
                     <input
                         onChange={this.handleChange}
                     />

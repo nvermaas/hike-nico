@@ -10,17 +10,15 @@ class HikeResultRow extends React.Component {
     render() {
         let url = "http://uilennest.net/owlsnest/hiking/" + this.props.id
         return (
-            <Col xs={6} md={4}>
+            <Col xs={4} md={3}>
 
                 <Thumbnail src={this.props.hike_image_url} alt="242x200">
-                 <h3>{this.props.title} {this.props.year}</h3>
-                  <p>{this.props.place} - {this.props.date} - {this.props.duration}</p>
-                  <p>
-                      <a href={url}><Button bsStyle="primary">Details</Button>&nbsp;</a>
-                    <Button bsStyle="default">Button</Button>
-                </p>
+                    <h4>{this.props.title} {this.props.year}</h4>
+                    <h5>{this.props.place}</h5>
+                    <p>
+                      <a href={url}><Button bsStyle="primary">Details</Button></a>&nbsp;
+                    </p>
                 </Thumbnail>
-
             </Col>
         );
     }

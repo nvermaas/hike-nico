@@ -1,9 +1,7 @@
 import React from 'react';
-import HikeRow from './HikeRow';
 import HikeThumbnail from './HikeThumbnail';
 import './Hikes.css';
 import PropTypes from 'prop-types';
-import {Grid, Row} from 'react-bootstrap'
 
 class HikeResults extends React.Component {
     render() {

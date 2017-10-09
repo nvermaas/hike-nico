@@ -85,11 +85,21 @@ class App extends React.Component {
         console.log("App.render()")
         return (
             <div>
+                <Navbar inverse fixedTop>
+                    <Grid>
+                        <Navbar.Header>
+                            <Navbar.Brand>
+                                <a href="/">Hike Nico (react)</a>
+                            </Navbar.Brand>
+                            <Navbar.Toggle />
+                        </Navbar.Header>
+                    </Grid>
+                </Navbar>
                 <Jumbotron>
-                    <Header/>
+                    <Grid>
                     <SearchInput changeSearchText={this.handleSearchChangeHikes}/>
                     <Hikes data={this.state.filteredHikeResults}/>
-
+                    </Grid>
                 </Jumbotron>
             </div>
         );

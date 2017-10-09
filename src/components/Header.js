@@ -13,7 +13,7 @@ class Header extends React.Component {
                     width="32"
                     height="32"
                 />
-                Hike Search
+                Hike Nico
             </header>
         );
     }
