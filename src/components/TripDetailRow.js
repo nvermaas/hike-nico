@@ -2,7 +2,7 @@
  * Created by Vermaas on 10/8/2017.
  */
 import React from 'react';
-import './TripDetailsResultRow.css';
+import './TripDetailRow.css';
 import PropTypes from 'prop-types';
 
 class TripDetailsResultRow extends React.Component {

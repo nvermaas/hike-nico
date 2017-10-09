@@ -2,7 +2,7 @@
  * Created by Vermaas on 10/8/2017.
  */
 import React from 'react';
-import './HikeResultRow.css';
+import './HikeRow.css';
 import PropTypes from 'prop-types';
 
 class HikeResultRow extends React.Component {

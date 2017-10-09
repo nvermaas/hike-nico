@@ -1,5 +1,5 @@
 import React from 'react';
-import TripDetailsResultRow from './TripDetailsResultRow';
+import TripDetailRow from './TripDetailRow';
 
 import PropTypes from 'prop-types';
 
@@ -11,7 +11,7 @@ class TripDetailsResults extends React.Component {
                 {
                     this.props.data.map((tripDetail) => {
                         return (
-                            <TripDetailsResultRow
+                            <TripDetailRow
                                 id={tripDetail.id}
                                 title={tripDetail.title}
                                 description={tripDetail.description}

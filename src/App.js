@@ -6,8 +6,8 @@ import Header from './components/Header';
 import SearchInput from './components/SearchInput';
 import filterHikeList from './functions/FilterHikeList';
 import filterTripDetails from './functions/FilterTripDetails';
-import HikeResults from './components/HikeResults';
-import TripDetailsResults from './components/TripDetailsResults';
+import Hikes from './components/Hikes';
+import TripDetails from './components/TripDetails';
 
 const API_HIKELIST_URL = "http://uilennest.net/owlsnest/hiking/rest/"
 const API_TRIPDETAILS_URL = "http://uilennest.net/owlsnest/hiking/tripdetails/"
@@ -78,15 +78,17 @@ class App extends React.Component {
     }
 
     render() {
+
+        // removed from <div>
+        // <SearchInput changeSearchText={this.handleSearchChangeTripDetails}/>
+        // <TripDetails data={this.state.filteredTripDetails}/>
         console.log("App.render()")
         return (
             <div>
                 <Jumbotron>
                     <Header/>
                     <SearchInput changeSearchText={this.handleSearchChangeHikes}/>
-                    <SearchInput changeSearchText={this.handleSearchChangeTripDetails}/>
-                    <HikeResults hikeData={this.state.filteredHikeResults}/>
-                    <TripDetailsResults data={this.state.filteredTripDetails}/>
+                    <Hikes data={this.state.filteredHikeResults}/>
 
                 </Jumbotron>
             </div>
